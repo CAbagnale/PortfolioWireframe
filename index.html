@@ -4,40 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- BELOW: normalize CSS (taking too long to load)-->
     <!--<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">-->
     <link rel="stylesheet" type="text/css" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Fjalla+One|IBM+Plex+Sans|Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto|Playfair+Display|Fjalla+One|IBM+Plex+Sans|Josefin+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Connor Ashpole's Portfolio</title>
 </head>
 <body>
-    <nav role="navigation"><div class="name">Connor Ashpole</div><div class="hamburger">&#9776</div>
+    <nav role="navigation">
+        <input type=button value="Lorem Ipsum" class="name" onclick="location.href = '#top'" />
+        <input type=button value="&#9776" class="hamburger">
+        <div class="mobile-nav hidden">
+            <div class="nav-menu">
+                <ul>
+                    <li><input type=button value="Bio" class="menu-button" onclick="location.href = '#bio'" /></li>
+                    <li><input type=button value="Projects" class="menu-button" onclick="location.href = '#projects'" /></li>
+                    <li><input type=button value="GitHub" class="menu-button" onclick="location.href = 'https://github.com/CAbagnale'" /></li>
+                    <li><input type=button value="LinkedIn" class="menu-button" onclick="alert('My LinkedIn profile will appear [when I make a finalized one]')" /></li>
+                </ul>
+            </div>
+        </div>
         <div class="nav-links">
-            <div class="nav-link"><a href="/">Bio</a></div>
-            <div class="nav-link"><a href="/">Projects</a></div>
-            <div class="nav-link"><a href="/">GitHub</a></div>
-            <div class="nav-link"><a href="/">LinkedIn</a></div>
+            <div class="nav-link"><a href="#bio">Bio</a></div>
+            <div class="nav-link"><a href="#projects">Projects</a></div>
+            <div class="nav-link"><a href="https://github.com/CAbagnale" target="_blank">GitHub</a></div>
+            <div class="nav-link"><a href="#" onClick="alert('My LinkedIn profile will appear [when I make a finalized one]')">LinkedIn</a></div>
         </div>
     </nav>
     <main role="main">
         <header role="banner">
             <div class="photo">photo</div>
-            <div class="banner-right"><h1>My name is Connor.</h1>
+            <summary class="banner-right"><h1>Lorem ipsum dolor sit</h1>
                 <div class="divider"></div>
-                <h2>I am a web developer, video game enthusiast, and IPA aficionado. 
-                I appreciate good (or bad) action movies and home improvement projects.</h2>
-            </div>
+                <h2>Integer vel odio iaculis, luctus tellus ac, molestie nunc. Nam vitae purus at turpis posuere venenatis. Cras convallis metus.</h2>
+                </summary>
         </header>
-        <section>
-            <h2></h2>
-        </section>
         <section class="bio">
-            <p>I am a front-end web developer and future graduate of Thinkful's full-stack flex program. I love puzzles and problem-solving. Intuitive and robust design is something I strive for, and I love when apps are easy to learn and function as expected. 
-                When I'm not coding, I am probably playing video games, watching Netflix, or biking. I am also a life-long guitar player and play from time to time.</p>
+            <a class="anchor" id="bio"></a>
+            <p>Aliquam metus nulla, sodales vel tortor vitae, lacinia eleifend leo. Curabitur sed ligula eget lectus rhoncus luctus ac at nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non ex vitae turpis ornare aliquet sit amet malesuada mi. Suspendisse venenatis tincidunt massa eu finibus. Fusce viverra, magna at suscipit ornare, libero felis lobortis lectus, at venenatis ligula augue sit amet neque.</p>
         </section>
-        <section class="project-grid">
-            <div class="project"><a href="https://cabagnale.github.io/BenHoganQuizApp/">Quiz App<span></span></a></div>
+        <section class="projects project-grid">
+            <a class="anchor" id="projects"></a>
+            <input type=button value="[future project #1]" class="project-card temp-project" onclick="location.href = '#projects'" />
+            <input type=button value="[future project #2]" class="project-card temp-project" onclick="location.href = '#projects'" />
+            <input type=button value="[future project #3]" class="project-card temp-project" onclick="location.href = '#projects'" />
+            <input type=button value="[future project #4]" class="project-card temp-project" onclick="location.href = '#projects'" />
+            <input type=button value="[future project #5]" class="project-card temp-project" onclick="location.href = '#projects'" />
+            <input type=button value="[future project #6]" class="project-card temp-project" onclick="location.href = '#projects'" />
         </section>
     </main>
     <footer role="content-info">footer</footer>
+    <script src="script.js"></script> 
 </body>
 </html>
